@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>Wallet Client Example</h1>
+    <div id="app">Loading…</div>
+    <script type="module">
+      import { parseEther } from 'viem'
+      import { client } from './index.ts'
+
+      // Some Wallets (like MetaMask) may require you to request access to Account addresses via client.`requestAddresses` first.
+      let [address] = await client.requestAddresses();
+      [address] = await client.getAddresses()
+
+      document.querySelector('#app').innerHTML = `<p>Address: ${address}</p>`
+
+      const hash = await client.sendTransaction({
+        account: address,
+        // to: '0xa5cc3c03994DB5b0d9A5eEdD10CabaB0813678AC',
+        value: parseEther('0.001')
+      })
+
+      document.querySelector('#app').innerHTML += `<p>Transaction Hash: ${hash}</p>`
+    </script>
+  </body>
+</html>
