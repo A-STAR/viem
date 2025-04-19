@@ -1,0 +1,17 @@
+{
+  "name": "custom-client",
+  "version": "1.0.0",
+  "main": "client.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx ./client.ts",
+    "tree-shake": "tsx ./tree-shake.ts"
+  },
+  "dependencies": {
+    "viem": "^2.27.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
