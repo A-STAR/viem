@@ -1,4 +1,6 @@
+import { encodeFunctionData, parseAbi } from 'viem'
 import { account, publicClient } from './config'
+import contract from './contract.json'
 
 const data = await publicClient.call({
   account,
