@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "tsx ./deployless-call.ts",
-    "bytecode": "tsx ./bytecode.ts"
+    "bytecode": "tsx ./bytecode.ts",
+    "factory": "tsx ./factory.ts"
   },
   "dependencies": {
     "viem": "^2.28.0"
