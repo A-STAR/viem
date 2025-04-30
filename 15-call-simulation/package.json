@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "tsx ./index.ts",
-    "contract-calls": "tsx ./contract-calls.ts"
+    "contract-calls": "tsx ./contract-calls.ts",
+    "asset-changes": "tsx ./asset-changes.ts"
   },
   "dependencies": {
     "viem": "^2.28.0"
