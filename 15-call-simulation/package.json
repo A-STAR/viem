@@ -6,7 +6,8 @@
   "scripts": {
     "start": "tsx ./index.ts",
     "contract-calls": "tsx ./contract-calls.ts",
-    "asset-changes": "tsx ./asset-changes.ts"
+    "asset-changes": "tsx ./asset-changes.ts",
+    "read-contracts": "tsx ./read-contracts.ts"
   },
   "dependencies": {
     "viem": "^2.28.0"
