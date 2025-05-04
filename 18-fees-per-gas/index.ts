@@ -1,6 +1,6 @@
 import { publicClient } from './client'
 
-const {
+let {
   maxFeePerGas,
   maxPriorityFeePerGas
 } = await publicClient.estimateFeesPerGas()
@@ -11,3 +11,7 @@ const { gasPrice } = await publicClient.estimateFeesPerGas({
 
 console.log(maxFeePerGas, maxPriorityFeePerGas)
 console.log(gasPrice)
+
+maxPriorityFeePerGas = await publicClient.estimateMaxPriorityFeePerGas()
+
+console.log(maxPriorityFeePerGas)
