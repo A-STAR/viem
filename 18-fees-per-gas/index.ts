@@ -6,7 +6,7 @@ let {
   maxPriorityFeePerGas
 } = await publicClient.estimateFeesPerGas()
 
-const { gasPrice } = await publicClient.estimateFeesPerGas({
+let { gasPrice } = await publicClient.estimateFeesPerGas({
   type: 'legacy'
 })
 
@@ -35,3 +35,7 @@ const feeHistory = await publicClient.getFeeHistory({
 })
 
 console.log(feeHistory)
+
+gasPrice = await publicClient.getGasPrice()
+
+console.log(gasPrice)
