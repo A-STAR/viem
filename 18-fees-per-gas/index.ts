@@ -24,3 +24,7 @@ const gas = await publicClient.estimateGas({
 })
 
 console.log(gas)
+
+const baseFee = await publicClient.getBlobBaseFee()
+
+console.log(baseFee)
