@@ -28,3 +28,10 @@ console.log(gas)
 const baseFee = await publicClient.getBlobBaseFee()
 
 console.log(baseFee)
+
+const feeHistory = await publicClient.getFeeHistory({
+  blockCount: 4,
+  rewardPercentiles: [25, 75]
+})
+
+console.log(feeHistory)
