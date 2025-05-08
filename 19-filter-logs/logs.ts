@@ -35,3 +35,12 @@ console.log(eventLogs)
 logs = await publicClient.getLogs()
 
 console.log(logs)
+
+
+const unwatch = publicClient.watchEvent({
+  address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+  event: parseAbiItem('event Transfer(address indexed from, address indexed to, uint256 value)'),
+  onLogs: logs => console.log(logs)
+})
+
+console.log(unwatch)
