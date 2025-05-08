@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "filter": "tsx ./filter.ts"
+    "filter": "tsx ./filter.ts",
+    "logs": "tsx ./logs.ts"
   },
   "dependencies": {
     "viem": "^2.28.0"
